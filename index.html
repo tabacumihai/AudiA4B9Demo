@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>A4 B9 Atlas — fiecare piesă explicată</title>
+  <meta name="description" content="Atlas interactiv al componentelor Audi A4 B9, cu sisteme, relații, simptome și explicații AI."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="rings">◯◯◯◯</span><div><b>A4 B9 ATLAS</b><small>interactive component explorer</small></div></div>
+    <div class="top-actions">
+      <button id="toggleLabels" class="ghost">Etichete</button>
+      <button id="aiOpen" class="accent">Întreabă Astra</button>
+    </div>
+  </header>
+
+  <main class="app">
+    <aside class="sidebar">
+      <div class="vehicle">
+        <div class="eyebrow">Platformă</div>
+        <h1>Audi A4 B9</h1>
+        <p>2015–2024 · 8W</p>
+        <div class="variant-row">
+          <select id="engineSelect">
+            <option>2.0 TDI</option>
+            <option>2.0 TFSI</option>
+            <option>3.0 TDI</option>
+          </select>
+          <select id="driveSelect">
+            <option>quattro</option>
+            <option>FWD</option>
+          </select>
+        </div>
+      </div>
+
+      <label class="search"><span>⌕</span><input id="search" placeholder="Caută piesă, simptom, cod…"/></label>
+
+      <div class="filter-title"><span>Sisteme</span><span id="resultCount"></span></div>
+      <div id="systemFilters" class="filters"></div>
+
+      <div class="legend">
+        <div><i class="dot l1"></i><span>Ansamblu</span></div>
+        <div><i class="dot l2"></i><span>Subansamblu</span></div>
+        <div><i class="dot l3"></i><span>Componentă</span></div>
+      </div>
+    </aside>
+
+    <section class="stage">
+      <div class="stage-head">
+        <div>
+          <div class="eyebrow">Exploded systems view</div>
+          <h2 id="stageTitle">Toate sistemele</h2>
+        </div>
+        <div class="zoom"><button id="zoomOut">−</button><span id="zoomLabel">100%</span><button id="zoomIn">+</button></div>
+      </div>
+
+      <div class="canvas-wrap">
+        <div id="canvas" class="canvas">
+          <svg class="car" viewBox="0 0 1200 620" role="img" aria-label="Schemă Audi A4 B9">
+            <defs>
+              <linearGradient id="bodyg" x1="0" x2="1"><stop offset="0" stop-color="#20242c"/><stop offset="1" stop-color="#111318"/></linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <path class="body" d="M183 371 C213 290 289 245 393 224 L628 190 C736 175 827 206 908 278 L1021 321 C1051 334 1067 361 1060 395 L1029 447 L198 447 C174 433 168 402 183 371Z"/>
+            <path class="glass" d="M421 228 L620 201 C690 193 755 206 816 247 L866 289 L382 289Z"/>
+            <path class="line" d="M357 303 L904 303"/>
+            <path class="line" d="M622 210 L626 443"/>
+            <path class="line" d="M833 285 L840 443"/>
+            <circle class="wheel" cx="356" cy="441" r="79"/><circle class="rim" cx="356" cy="441" r="45"/>
+            <circle class="wheel" cx="885" cy="441" r="79"/><circle class="rim" cx="885" cy="441" r="45"/>
+            <path class="engine-zone zone" data-zone="engine" d="M202 318 L367 295 L400 361 L380 410 L218 402Z"/>
+            <path class="cabin-zone zone" data-zone="cabin" d="M409 307 L818 307 L817 401 L411 401Z"/>
+            <path class="rear-zone zone" data-zone="rear" d="M829 306 L1018 338 L1028 399 L830 402Z"/>
+            <path class="under-zone zone" data-zone="underbody" d="M425 410 L812 410 L813 438 L425 438Z"/>
+            <g id="hotspots"></g>
+          </svg>
+          <div id="labels" class="labels"></div>
+        </div>
+      </div>
+
+      <div class="bottom-strip">
+        <div><strong id="visibleParts">0</strong><span>piese indexate în demo</span></div>
+        <div><strong>∞</strong><span>extensibil prin catalog OEM</span></div>
+        <div><strong>AI</strong><span>explicații contextuale</span></div>
+      </div>
+    </section>
+
+    <aside id="detail" class="detail">
+      <button id="detailClose" class="detail-close">×</button>
+      <div id="detailContent" class="empty-detail">
+        <span class="big-plus">+</span>
+        <h3>Selectează o piesă</h3>
+        <p>Apasă pe un punct din mașină sau caută o componentă pentru a vedea explicația.</p>
+      </div>
+    </aside>
+  </main>
+
+  <div id="aiModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-head"><div><div class="eyebrow">A4 B9 Copilot</div><h3>Întreabă Astra</h3></div><button id="aiClose">×</button></div>
+      <div id="aiContext" class="ai-context">Context: Audi A4 B9 · toate sistemele</div>
+      <div id="chat" class="chat"><div class="assistant-msg">Spune-mi un simptom sau selectează o piesă. Pot explica rolul ei, ce o poate defecta și ce alte componente merită verificate.</div></div>
+      <form id="aiForm" class="ai-form"><input id="aiInput" placeholder="Ex: vibrează la oprirea motorului…"/><button>Trimite</button></form>
+      <small class="disclaimer">Diagnoza AI este orientativă. Verificarea fizică și documentația de service au prioritate.</small>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

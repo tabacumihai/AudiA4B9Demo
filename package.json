@@ -1,0 +1,12 @@
+{
+  "name": "audi-a4-b9-atlas",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "openai": "^5.20.0"
+  }
+}
