@@ -1,0 +1,1 @@
+Pune aici modelele GLB/GLTF segmentate și mapează-le la component_id.
