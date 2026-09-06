@@ -1,1 +1,1056 @@
-
+[
+  {
+    "id": "ENG-001",
+    "name": "Bloc motor",
+    "system": "Motor",
+    "zone": "engine",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Structura principală a motorului. Găzduiește cilindrii, canalele de ulei și lichid de răcire.",
+    "symptoms": [
+      "pierderi lichid",
+      "compresie scăzută",
+      "zgomote mecanice"
+    ],
+    "related": [
+      "ENG-002",
+      "ENG-003",
+      "LUB-001"
+    ]
+  },
+  {
+    "id": "ENG-002",
+    "name": "Chiulasă",
+    "system": "Motor",
+    "zone": "engine",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Închide partea superioară a cilindrilor și integrează supapele, canalele de admisie/evacuare.",
+    "symptoms": [
+      "fum alb",
+      "presiune în vas",
+      "misfire"
+    ],
+    "related": [
+      "ENG-001",
+      "ENG-004",
+      "AIR-002"
+    ]
+  },
+  {
+    "id": "ENG-003",
+    "name": "Piston",
+    "system": "Motor",
+    "zone": "engine",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 3,
+    "summary": "Transformă presiunea arderii în mișcare liniară transmisă arborelui cotit.",
+    "symptoms": [
+      "consum ulei",
+      "compresie slabă",
+      "bătăi"
+    ],
+    "related": [
+      "ENG-001",
+      "ENG-005"
+    ]
+  },
+  {
+    "id": "ENG-004",
+    "name": "Arbore cu came",
+    "system": "Motor",
+    "zone": "engine",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 3,
+    "summary": "Controlează deschiderea și închiderea supapelor.",
+    "symptoms": [
+      "ticking",
+      "putere redusă",
+      "erori sincronizare"
+    ],
+    "related": [
+      "ENG-002",
+      "ENG-006"
+    ]
+  },
+  {
+    "id": "ENG-005",
+    "name": "Arbore cotit",
+    "system": "Motor",
+    "zone": "engine",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Transformă mișcarea pistoanelor în rotație.",
+    "symptoms": [
+      "vibrații",
+      "bătăi lagăr",
+      "presiune ulei scăzută"
+    ],
+    "related": [
+      "ENG-003",
+      "DRV-002",
+      "LUB-001"
+    ]
+  },
+  {
+    "id": "ENG-006",
+    "name": "Distribuție",
+    "system": "Motor",
+    "zone": "engine",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Sincronizează arborele cotit cu arborii cu came.",
+    "symptoms": [
+      "zornăit",
+      "pornire grea",
+      "erori timing"
+    ],
+    "related": [
+      "ENG-004",
+      "ENG-005"
+    ]
+  },
+  {
+    "id": "AIR-001",
+    "name": "Filtru aer",
+    "system": "Admisie",
+    "zone": "engine",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Reține particulele înainte ca aerul să intre în motor.",
+    "symptoms": [
+      "debit aer redus",
+      "consum crescut"
+    ],
+    "related": [
+      "AIR-002",
+      "AIR-003"
+    ]
+  },
+  {
+    "id": "AIR-002",
+    "name": "Galerie admisie",
+    "system": "Admisie",
+    "zone": "engine",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Distribuie aerul către cilindri.",
+    "symptoms": [
+      "pierdere putere",
+      "swirl flap faults",
+      "depuneri"
+    ],
+    "related": [
+      "AIR-001",
+      "ENG-002",
+      "EGR-001"
+    ]
+  },
+  {
+    "id": "AIR-003",
+    "name": "Turbocompresor",
+    "system": "Admisie",
+    "zone": "engine",
+    "side": "right",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Comprimă aerul de admisie folosind energia gazelor de evacuare.",
+    "symptoms": [
+      "lipsă boost",
+      "șuierat",
+      "fum",
+      "consum ulei"
+    ],
+    "related": [
+      "AIR-004",
+      "EXH-001",
+      "LUB-001"
+    ]
+  },
+  {
+    "id": "AIR-004",
+    "name": "Intercooler",
+    "system": "Admisie",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Răcește aerul comprimat de turbo pentru densitate mai mare.",
+    "symptoms": [
+      "pierderi boost",
+      "ulei pe furtunuri",
+      "putere redusă"
+    ],
+    "related": [
+      "AIR-003",
+      "AIR-005"
+    ]
+  },
+  {
+    "id": "AIR-005",
+    "name": "Senzor MAP",
+    "system": "Admisie",
+    "zone": "engine",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 3,
+    "summary": "Măsoară presiunea în admisie pentru controlul motorului.",
+    "symptoms": [
+      "boost inconsistent",
+      "limp mode",
+      "erori presiune"
+    ],
+    "related": [
+      "AIR-004",
+      "ECU-001"
+    ]
+  },
+  {
+    "id": "EGR-001",
+    "name": "Supapă EGR",
+    "system": "Emisii",
+    "zone": "engine",
+    "side": "rear",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Recirculă o parte din gazele de evacuare pentru reducerea NOx.",
+    "symptoms": [
+      "mers neregulat",
+      "depuneri",
+      "limp mode"
+    ],
+    "related": [
+      "AIR-002",
+      "EXH-001",
+      "ECU-001"
+    ]
+  },
+  {
+    "id": "EXH-001",
+    "name": "DPF",
+    "system": "Emisii",
+    "zone": "underbody",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Reține particulele de funingine și se regenerează periodic.",
+    "symptoms": [
+      "regenerări dese",
+      "presiune diferențială mare",
+      "limp mode"
+    ],
+    "related": [
+      "EGR-001",
+      "EXH-002",
+      "EXH-003"
+    ]
+  },
+  {
+    "id": "EXH-002",
+    "name": "Senzor presiune DPF",
+    "system": "Emisii",
+    "zone": "engine",
+    "side": "rear",
+    "oem": "variant-dependent",
+    "level": 3,
+    "summary": "Măsoară diferența de presiune pe filtrul de particule.",
+    "symptoms": [
+      "regen eronată",
+      "martor motor"
+    ],
+    "related": [
+      "EXH-001",
+      "ECU-001"
+    ]
+  },
+  {
+    "id": "EXH-003",
+    "name": "Senzor NOx",
+    "system": "Emisii",
+    "zone": "underbody",
+    "side": "rear",
+    "oem": "variant-dependent",
+    "level": 3,
+    "summary": "Măsoară oxizii de azot pentru strategia de post-tratare.",
+    "symptoms": [
+      "MIL",
+      "consum AdBlue anormal",
+      "erori SCR"
+    ],
+    "related": [
+      "EXH-004",
+      "ECU-001"
+    ]
+  },
+  {
+    "id": "EXH-004",
+    "name": "Modul SCR / AdBlue",
+    "system": "Emisii",
+    "zone": "rear",
+    "side": "rear",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Dozează agent reducător pentru scăderea emisiilor NOx.",
+    "symptoms": [
+      "countdown pornire",
+      "erori dozare",
+      "cristalizare"
+    ],
+    "related": [
+      "EXH-003",
+      "FUEL-004"
+    ]
+  },
+  {
+    "id": "FUEL-001",
+    "name": "Pompă combustibil rezervor",
+    "system": "Combustibil",
+    "zone": "rear",
+    "side": "rear",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Trimite combustibilul din rezervor către circuitul de alimentare.",
+    "symptoms": [
+      "pornire grea",
+      "presiune joasă",
+      "oprire motor"
+    ],
+    "related": [
+      "FUEL-002",
+      "FUEL-003"
+    ]
+  },
+  {
+    "id": "FUEL-002",
+    "name": "Filtru combustibil",
+    "system": "Combustibil",
+    "zone": "engine",
+    "side": "left",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Protejează sistemul de injecție de particule și apă.",
+    "symptoms": [
+      "pornire grea",
+      "putere redusă"
+    ],
+    "related": [
+      "FUEL-001",
+      "FUEL-003"
+    ]
+  },
+  {
+    "id": "FUEL-003",
+    "name": "Pompă înaltă presiune",
+    "system": "Combustibil",
+    "zone": "engine",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Ridică presiunea combustibilului pentru injecția directă.",
+    "symptoms": [
+      "rail pressure low",
+      "pornire lungă",
+      "span metalic"
+    ],
+    "related": [
+      "FUEL-002",
+      "FUEL-004",
+      "ECU-001"
+    ]
+  },
+  {
+    "id": "FUEL-004",
+    "name": "Injector",
+    "system": "Combustibil",
+    "zone": "engine",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 3,
+    "summary": "Dozează combustibilul în cilindru cu precizie ridicată.",
+    "symptoms": [
+      "misfire",
+      "corecții mari",
+      "fum",
+      "bătăi"
+    ],
+    "related": [
+      "FUEL-003",
+      "ENG-002"
+    ]
+  },
+  {
+    "id": "LUB-001",
+    "name": "Pompă ulei",
+    "system": "Lubrifiere",
+    "zone": "engine",
+    "side": "bottom",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Asigură debitul și presiunea uleiului către lagăre, turbo și distribuție.",
+    "symptoms": [
+      "presiune ulei scăzută",
+      "zgomote lagăre"
+    ],
+    "related": [
+      "ENG-005",
+      "AIR-003",
+      "LUB-002"
+    ]
+  },
+  {
+    "id": "LUB-002",
+    "name": "Filtru ulei",
+    "system": "Lubrifiere",
+    "zone": "engine",
+    "side": "left",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Reține contaminanții din uleiul motor.",
+    "symptoms": [
+      "debit redus",
+      "ulei contaminat"
+    ],
+    "related": [
+      "LUB-001"
+    ]
+  },
+  {
+    "id": "COOL-001",
+    "name": "Pompă apă",
+    "system": "Răcire",
+    "zone": "engine",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Circulă lichidul de răcire prin motor și radiator.",
+    "symptoms": [
+      "supraîncălzire",
+      "pierderi lichid"
+    ],
+    "related": [
+      "COOL-002",
+      "COOL-003"
+    ]
+  },
+  {
+    "id": "COOL-002",
+    "name": "Termostat",
+    "system": "Răcire",
+    "zone": "engine",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Reglează circuitul de răcire pentru atingerea și menținerea temperaturii corecte.",
+    "symptoms": [
+      "încălzire lentă",
+      "supraîncălzire"
+    ],
+    "related": [
+      "COOL-001",
+      "COOL-003"
+    ]
+  },
+  {
+    "id": "COOL-003",
+    "name": "Radiator",
+    "system": "Răcire",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Transferă căldura lichidului de răcire către aer.",
+    "symptoms": [
+      "pierderi",
+      "temperatură crescută"
+    ],
+    "related": [
+      "COOL-001",
+      "COOL-004"
+    ]
+  },
+  {
+    "id": "COOL-004",
+    "name": "Electroventilator",
+    "system": "Răcire",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Forțează aer prin radiatoare la viteze mici sau sarcină termică mare.",
+    "symptoms": [
+      "AC slab la staționare",
+      "supraîncălzire"
+    ],
+    "related": [
+      "COOL-003",
+      "HVAC-001"
+    ]
+  },
+  {
+    "id": "DRV-001",
+    "name": "Cutie S tronic",
+    "system": "Transmisie",
+    "zone": "center",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Transmisie dublu ambreiaj; varianta exactă depinde de motorizare și tracțiune.",
+    "symptoms": [
+      "șocuri",
+      "patinare",
+      "warning gearbox"
+    ],
+    "related": [
+      "DRV-002",
+      "DRV-003",
+      "TCU-001"
+    ]
+  },
+  {
+    "id": "DRV-002",
+    "name": "Volantă cu masă dublă",
+    "system": "Transmisie",
+    "zone": "center",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Filtrează vibrațiile torsionale între motor și transmisie.",
+    "symptoms": [
+      "zdrăngănit",
+      "vibrații pornire/opriere"
+    ],
+    "related": [
+      "ENG-005",
+      "DRV-001"
+    ]
+  },
+  {
+    "id": "DRV-003",
+    "name": "Mecatronică",
+    "system": "Transmisie",
+    "zone": "center",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Integrează hidraulica și electronica de comandă a transmisiei.",
+    "symptoms": [
+      "PRNDS warning",
+      "schimbări dure",
+      "treaptă indisponibilă"
+    ],
+    "related": [
+      "DRV-001",
+      "TCU-001"
+    ]
+  },
+  {
+    "id": "AWD-001",
+    "name": "Diferențial central / quattro",
+    "system": "Tracțiune",
+    "zone": "center",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Distribuie cuplul între punți la versiunile quattro; configurația depinde de variantă.",
+    "symptoms": [
+      "vibrații",
+      "zgomot transmisie"
+    ],
+    "related": [
+      "DRV-001",
+      "AWD-002",
+      "AWD-003"
+    ]
+  },
+  {
+    "id": "AWD-002",
+    "name": "Arbore cardanic",
+    "system": "Tracțiune",
+    "zone": "underbody",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Transmite cuplul spre puntea spate la versiunile quattro.",
+    "symptoms": [
+      "vibrații la viteză",
+      "cloncănit"
+    ],
+    "related": [
+      "AWD-001",
+      "AWD-003"
+    ]
+  },
+  {
+    "id": "AWD-003",
+    "name": "Diferențial spate",
+    "system": "Tracțiune",
+    "zone": "rear",
+    "side": "rear",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Distribuie cuplul către roțile spate.",
+    "symptoms": [
+      "huruit",
+      "joc",
+      "scurgeri ulei"
+    ],
+    "related": [
+      "AWD-002",
+      "SUS-004"
+    ]
+  },
+  {
+    "id": "BRK-001",
+    "name": "Disc frână față",
+    "system": "Frânare",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Suprafața de fricțiune pentru frânarea roților față.",
+    "symptoms": [
+      "vibrații la frânare",
+      "buza mare",
+      "fisuri"
+    ],
+    "related": [
+      "BRK-002",
+      "BRK-003"
+    ]
+  },
+  {
+    "id": "BRK-002",
+    "name": "Plăcuțe frână față",
+    "system": "Frânare",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Elementele de fricțiune presate pe disc de etrier.",
+    "symptoms": [
+      "scârțâit",
+      "uzură",
+      "martor frână"
+    ],
+    "related": [
+      "BRK-001",
+      "BRK-003"
+    ]
+  },
+  {
+    "id": "BRK-003",
+    "name": "Etrier față",
+    "system": "Frânare",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Transformă presiunea hidraulică în forță de strângere a plăcuțelor.",
+    "symptoms": [
+      "mașina trage într-o parte",
+      "disc încins",
+      "uzură inegală"
+    ],
+    "related": [
+      "BRK-001",
+      "BRK-002",
+      "BRK-004"
+    ]
+  },
+  {
+    "id": "BRK-004",
+    "name": "Modul ABS/ESC",
+    "system": "Frânare",
+    "zone": "engine",
+    "side": "left",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Controlează ABS, ESC și distribuția electronică a frânării.",
+    "symptoms": [
+      "martori ABS/ESC",
+      "funcții asistență indisponibile"
+    ],
+    "related": [
+      "BRK-003",
+      "SEN-001",
+      "ECU-001"
+    ]
+  },
+  {
+    "id": "SUS-001",
+    "name": "Braț suspensie față superior",
+    "system": "Suspensie",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Ghidează poziția fuzetei și controlează geometria roții.",
+    "symptoms": [
+      "bătăi",
+      "uzură anvelope",
+      "direcție imprecisă"
+    ],
+    "related": [
+      "SUS-002",
+      "STR-001"
+    ]
+  },
+  {
+    "id": "SUS-002",
+    "name": "Amortizor față",
+    "system": "Suspensie",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Controlează oscilațiile arcului și menține contactul anvelopei cu drumul.",
+    "symptoms": [
+      "balans",
+      "scurgeri",
+      "bătăi"
+    ],
+    "related": [
+      "SUS-001",
+      "SUS-003"
+    ]
+  },
+  {
+    "id": "SUS-003",
+    "name": "Arc față",
+    "system": "Suspensie",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Susține masa vehiculului și permite cursa suspensiei.",
+    "symptoms": [
+      "mașină lăsată",
+      "zgomot metalic"
+    ],
+    "related": [
+      "SUS-002"
+    ]
+  },
+  {
+    "id": "SUS-004",
+    "name": "Butuc / rulment roată spate",
+    "system": "Suspensie",
+    "zone": "rear",
+    "side": "rear",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Permite rotația roții cu frecare redusă și preia sarcinile laterale.",
+    "symptoms": [
+      "huruit proporțional cu viteza",
+      "joc roată"
+    ],
+    "related": [
+      "AWD-003",
+      "BRK-005"
+    ]
+  },
+  {
+    "id": "BRK-005",
+    "name": "Frână de parcare electrică",
+    "system": "Frânare",
+    "zone": "rear",
+    "side": "rear",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Acționează frâna de staționare prin motoare electrice la etrierele spate.",
+    "symptoms": [
+      "parking brake fault",
+      "etrier blocat"
+    ],
+    "related": [
+      "SUS-004",
+      "BCM-001"
+    ]
+  },
+  {
+    "id": "STR-001",
+    "name": "Casetă de direcție electrică",
+    "system": "Direcție",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Transformă rotația volanului în mișcare laterală și oferă servoasistență electrică.",
+    "symptoms": [
+      "direcție grea",
+      "joc",
+      "martor direcție"
+    ],
+    "related": [
+      "SUS-001",
+      "STR-002"
+    ]
+  },
+  {
+    "id": "STR-002",
+    "name": "Coloană de direcție",
+    "system": "Direcție",
+    "zone": "cabin",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Leagă volanul de mecanismul de direcție și integrează senzori/comenzi.",
+    "symptoms": [
+      "joc volan",
+      "zgomote",
+      "erori unghi volan"
+    ],
+    "related": [
+      "STR-001",
+      "SEN-001"
+    ]
+  },
+  {
+    "id": "ECU-001",
+    "name": "ECU motor",
+    "system": "Electronică",
+    "zone": "engine",
+    "side": "rear",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Calculatorul principal al motorului: injecție, boost, emisii, protecții și diagnoză.",
+    "symptoms": [
+      "no-start",
+      "multiple DTC",
+      "limp mode"
+    ],
+    "related": [
+      "AIR-005",
+      "FUEL-003",
+      "EGR-001"
+    ]
+  },
+  {
+    "id": "TCU-001",
+    "name": "TCU transmisie",
+    "system": "Electronică",
+    "zone": "center",
+    "side": "center",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Controlează logica transmisiei și comunică pe rețeaua CAN.",
+    "symptoms": [
+      "gearbox malfunction",
+      "schimbări neregulate"
+    ],
+    "related": [
+      "DRV-001",
+      "DRV-003",
+      "GW-001"
+    ]
+  },
+  {
+    "id": "BCM-001",
+    "name": "Body Control Module",
+    "system": "Electronică",
+    "zone": "cabin",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Coordonează numeroase funcții de caroserie, iluminare și confort.",
+    "symptoms": [
+      "funcții electrice intermitente",
+      "erori iluminare"
+    ],
+    "related": [
+      "GW-001",
+      "BRK-005"
+    ]
+  },
+  {
+    "id": "GW-001",
+    "name": "CAN Gateway",
+    "system": "Electronică",
+    "zone": "cabin",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Interconectează magistralele și modulele electronice ale vehiculului.",
+    "symptoms": [
+      "module offline",
+      "multiple communication DTC"
+    ],
+    "related": [
+      "ECU-001",
+      "TCU-001",
+      "BCM-001"
+    ]
+  },
+  {
+    "id": "SEN-001",
+    "name": "Senzor unghi volan",
+    "system": "Senzori",
+    "zone": "cabin",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 3,
+    "summary": "Furnizează poziția volanului pentru ESC și sisteme de asistență.",
+    "symptoms": [
+      "ESC fault",
+      "steering angle implausible"
+    ],
+    "related": [
+      "STR-002",
+      "BRK-004"
+    ]
+  },
+  {
+    "id": "HVAC-001",
+    "name": "Compresor climatizare",
+    "system": "Climatizare",
+    "zone": "engine",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Comprimă agentul frigorific și susține funcția de răcire a habitaclului.",
+    "symptoms": [
+      "aer cald",
+      "zgomot compresor",
+      "presiuni anormale"
+    ],
+    "related": [
+      "HVAC-002",
+      "COOL-004"
+    ]
+  },
+  {
+    "id": "HVAC-002",
+    "name": "Condensator AC",
+    "system": "Climatizare",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Elimină căldura din agentul frigorific în partea frontală a mașinii.",
+    "symptoms": [
+      "AC slab",
+      "pierderi agent"
+    ],
+    "related": [
+      "HVAC-001",
+      "COOL-004"
+    ]
+  },
+  {
+    "id": "ELE-001",
+    "name": "Baterie 12 V",
+    "system": "Electric",
+    "zone": "rear",
+    "side": "rear",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Alimentează rețeaua de joasă tensiune și susține pornirea/managementul energetic.",
+    "symptoms": [
+      "pornire lentă",
+      "erori multiple la tensiune joasă"
+    ],
+    "related": [
+      "ELE-002",
+      "GW-001"
+    ]
+  },
+  {
+    "id": "ELE-002",
+    "name": "Alternator",
+    "system": "Electric",
+    "zone": "engine",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Încarcă bateria și alimentează consumatorii în mers.",
+    "symptoms": [
+      "baterie nu se încarcă",
+      "tensiune instabilă"
+    ],
+    "related": [
+      "ELE-001",
+      "ENG-006"
+    ]
+  },
+  {
+    "id": "BODY-001",
+    "name": "Capotă",
+    "system": "Caroserie",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Panoul exterior care acoperă compartimentul motor.",
+    "symptoms": [
+      "aliniere slabă",
+      "coroziune",
+      "închidere dificilă"
+    ],
+    "related": [
+      "BODY-002"
+    ]
+  },
+  {
+    "id": "BODY-002",
+    "name": "Broască capotă",
+    "system": "Caroserie",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Blochează mecanic capota și comunică starea deschis/închis către vehicul.",
+    "symptoms": [
+      "warning capotă",
+      "nu se deschide/închide"
+    ],
+    "related": [
+      "BODY-001",
+      "BCM-001"
+    ]
+  },
+  {
+    "id": "LIGHT-001",
+    "name": "Far LED / Matrix LED",
+    "system": "Iluminare",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 1,
+    "summary": "Ansamblu de iluminare față; echiparea exactă depinde de opțiuni.",
+    "symptoms": [
+      "segment LED stins",
+      "adaptive light fault"
+    ],
+    "related": [
+      "LIGHT-002",
+      "BCM-001"
+    ]
+  },
+  {
+    "id": "LIGHT-002",
+    "name": "Modul control far",
+    "system": "Iluminare",
+    "zone": "front",
+    "side": "front",
+    "oem": "variant-dependent",
+    "level": 2,
+    "summary": "Controlează funcțiile electronice ale farului și adaptarea fasciculului.",
+    "symptoms": [
+      "flicker",
+      "far inactiv",
+      "DTC modul"
+    ],
+    "related": [
+      "LIGHT-001",
+      "BCM-001"
+    ]
+  }
+]
